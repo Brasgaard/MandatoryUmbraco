@@ -1,0 +1,28 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@{
+	Layout = null;
+}
+
+<!doctype html>
+<html lang="EN">
+<Head>
+    <meta charset="UTF-8">
+    <meta name="description" content="My first Umbraco website">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript, Umbraco">
+    <meta name="author" content="Alexander Brasgaard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+</Head>
+<body>
+    @Umbraco.RenderMacro("mainMenu")
+    <hr>
+    @RenderBody()
+
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>

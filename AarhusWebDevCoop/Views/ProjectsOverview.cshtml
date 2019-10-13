@@ -1,0 +1,26 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.ProjectsOverview>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+
+	Layout = "Master.cshtml";
+}
+
+@Model.Value("projectTitle")
+@Model.Value("projectsBodyText")
+@Model.Value("footer")
+
+
+@{
+	var selection = Umbraco.Content(Guid.Parse("e3b39edb-8da7-4cdc-8b9a-c3e138c6a059"))
+    .Children()
+    .Where(x => x.IsVisible());
+}
+<ul>
+	@foreach (var item in selection)
+	{
+		<li>
+			<a href="@item.Url">@item.Name</a>
+		</li>
+	}
+</ul>
+
