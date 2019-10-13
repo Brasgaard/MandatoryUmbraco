@@ -5,7 +5,7 @@
 	var selection = Umbraco.Content(Guid.Parse("e3b39edb-8da7-4cdc-8b9a-c3e138c6a059"))
     .ChildrenOfType("projectItem")
     .Where(x => x.HasValue("projectStatus") && x.GetProperty("projectStatus").Value<string>() == "Completed")
-    .Where(x => x.IsVisible()).Take(5)
+    .Where(x => x.IsVisible()).Take(3)
     .OrderByDescending(x => x.CreateDate);
 }
 <div>
